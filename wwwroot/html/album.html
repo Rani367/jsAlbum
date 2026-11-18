@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>אלבום האופנועים</title>
+    <script type="text/javascript">
+        var currImg = 1;
+        var maxImg = 4;
+
+        function Next() {
+            currImg++;
+            if (currImg > maxImg) {
+                currImg = 1;
+            }
+            document.getElementById("bike").src = "../images/myBike" + currImg + ".jpg";
+        }
+
+        function Prev() {
+            currImg--;
+            if (currImg < 1) {
+                currImg = maxImg;
+            }
+            document.getElementById("bike").src = "../images/myBike" + currImg + ".jpg";
+        }
+    </script>
+</head>
+<body style="text-align:center">
+    <h1>אלבום האופנועים</h1>
+    <a href="#" onclick="Prev()">הקודם</a> | <a href="#" onclick="Next()">הבא</a>
+    <br /><br />
+    <img id="bike" src="../images/myBike1.jpg" alt="bike" style="width:800px;" />
+</body>
+</html>
